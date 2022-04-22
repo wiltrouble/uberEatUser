@@ -4,13 +4,14 @@ import { StyleSheet, Text, View, Image, FlatList } from "react-native";
 import RestaurantItem from "./src/components/RestaurantItem";
 import restaurants from "./assets/data/restaurants.json";
 import HomeScreen from "./src/screens/HomeScreen";
+import RestaurantDetailsScreen from "./src/screens/RestaurantDetails";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <HomeScreen/> 
-
-      <StatusBar style="auto" />
+      {/* <HomeScreen/>  */}
+      <RestaurantDetailsScreen/>
+      <StatusBar style="light" />
     </View>
   );
 }
@@ -21,7 +22,5 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
-    padding: 10,
-    paddingVertical: 40 //temporal
   },
 });
