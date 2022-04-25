@@ -6,12 +6,13 @@ import restaurants from "./assets/data/restaurants.json";
 import HomeScreen from "./src/screens/HomeScreen";
 import RestaurantDetailsScreen from "./src/screens/RestaurantDetails";
 import DishDetailsScreen from "./src/screens/DishtDetailsScreen";
+import BasketScreen from "./src/screens/BasckettDetailsScreen";
 
 export default function App() {
   return (
     <View style={styles.container}>
       {/* <HomeScreen/>  */}
-      <DishDetailsScreen />
+      <BasketScreen/>
       <StatusBar style="light" />
     </View>
   );
