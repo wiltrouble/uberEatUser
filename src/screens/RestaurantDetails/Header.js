@@ -17,6 +17,7 @@ const RestaurantHeader = ({restaurant}) => {
           ${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime} -{" "}
           {restaurant.maxDeliveryTime} minutes
         </Text>
+        <Text style={styles.menu}>Menu</Text>
       </View>
     </View>
   );

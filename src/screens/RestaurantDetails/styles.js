@@ -25,5 +25,10 @@ const styles = StyleSheet.create({
     top: 30,
     left: 10,
   },
+  menu: {
+    marginVertical: 20,
+    fontSize: 18,
+    letterSpacing: 0.77,
+  }
 });
 export default styles
