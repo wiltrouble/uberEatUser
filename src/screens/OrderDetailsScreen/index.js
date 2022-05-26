@@ -7,6 +7,7 @@ import styles from "./styles";
 import BasketDishItem from "../../components/BasketDishItem";
 const order = orders[0];
 
+
 const OrderDetailsHeader = () => {
   return (
     <View>
@@ -23,6 +24,8 @@ const OrderDetailsHeader = () => {
 };
 
 const OrderDetailsScreen = () => {
+  
+
   return (
     <FlatList
       ListHeaderComponent={OrderDetailsHeader}

@@ -1,8 +1,17 @@
-import { Text, View, Image, StyleSheet } from "react-native";
+import { Text, View, Image, StyleSheet, Pressable } from "react-native";
+import { useNavigation } from '@react-navigation/native'
 
 const RestaurantItem = ({ restaurant }) => {
+
+  const navigation = useNavigation()
+  
+  
+  const onPress = (restaurant) => {
+    navigation.navigate("Restaurant", {id: restaurant.id})
+  };
+
   return (
-    <View style={styles.restaurantContainer}>
+    <Pressable style={styles.restaurantContainer} onPress={() => onPress(restaurant.name)}>
       <Image
         style={styles.image}
         source={{
@@ -10,18 +19,18 @@ const RestaurantItem = ({ restaurant }) => {
         }}
       />
       <View style={styles.row}>
-      <View>
-      <Text style={styles.title}>{restaurant.name}</Text>
-      <Text style={styles.subtitle}>
-        ${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime} -{" "}
-        {restaurant.maxDeliveryTime} minutes
-      </Text>
+        <View>
+          <Text style={styles.title}>{restaurant.name}</Text>
+          <Text style={styles.subtitle}>
+            ${restaurant.deliveryFee} &#8226; {restaurant.minDeliveryTime} -{" "}
+            {restaurant.maxDeliveryTime} minutes
+          </Text>
+        </View>
+        <View style={styles.rating}>
+          <Text>{restaurant.rating}</Text>
+        </View>
       </View>
-      <View style={styles.rating}>
-        <Text>{restaurant.rating}</Text>
-      </View>
-      </View>
-    </View>
+    </Pressable>
   );
 };
 
@@ -44,18 +53,18 @@ const styles = StyleSheet.create({
     color: "grey",
   },
   row: {
-    flexDirection: 'row',
-    alignItems: 'center'
+    flexDirection: "row",
+    alignItems: "center",
   },
   rating: {
-    marginLeft: 'auto',
-    backgroundColor: 'gray',
+    marginLeft: "auto",
+    backgroundColor: "gray",
     width: 30,
-    height: 30 ,
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 20
-  }
+    height: 30,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+  },
 });
 
 export default RestaurantItem;
