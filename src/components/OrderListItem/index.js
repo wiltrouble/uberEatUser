@@ -18,8 +18,8 @@ const OrderListItem = ({ order }) => {
         <Text style={{ fontWeight: "600", fontSize: 16 }}>
           {order.Restaurant.name}
         </Text>
-        <Text style={{ marginVertical: 5 }}>3 items $38,39</Text>
-        <Text>2 days ago &#8226; {order.status}</Text>
+        <Text style={{ marginVertical: 5 }}>4 items $38,39</Text>
+        <Text>1 days ago &#8226; {order.status}</Text>
       </View>
     </Pressable>
   );
